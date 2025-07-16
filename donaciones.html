@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar por Transferencia Bancaria - Trombofilia y Trombosis Argentina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light text-bg-dark py-2 px-3 fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="img/Navbar-logo.png" class="logo-ong ms-auto" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link navbar-font-color" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-font-color" href="index.html#nosotros">Quiénes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-font-color" href="index.html#historias">Historias</a> 
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link navbar-font-color" href="index.html#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container mt-5 py-5">
+        <h2 class="text-center mb-4 pt-5">Donaciones por Transferencia Bancaria</h2>
+        <p class="lead text-center">¡Tu apoyo es fundamental! Si deseas realizar una transferencia directa, aquí tienes los datos de nuestra cuenta:</p>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger mb-3">Datos de la Cuenta Bancaria (Banco Galicia)</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Nombre del Titular:</strong> Asociación civil Trombofilia y Trombosis Argentina.</li>
+                            <li class="list-group-item"><strong>CUIT / CUIL:</strong> 30-71847698-01</li>
+                            <li class="list-group-item"><strong>Banco:</strong> Banco Galicia</li>
+                            <li class="list-group-item"><strong>Tipo de Cuenta:</strong> Cuenta Corriente</li>
+                            <li class="list-group-item"><strong>Número de Cuenta:</strong> $ N° 0004245-1 340-1</li>
+                            <li class="list-group-item"><strong>CBU:</strong> <span id="cbu-text">0070340420000004245119</span> <button class="btn btn-sm btn-outline-secondary ms-2 btn-outline-danger" onclick="copyToClipboard('cbu-text', this)">Copiar CBU</button></li>
+                        </ul>
+                        <p class="card-text mt-3 text-muted">Asegúrate de verificar los datos antes de confirmar la transferencia. ¡Gracias por tu generosidad!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-outline-danger">Volver al Inicio</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función para copiar texto al portapapeles
+        function copyToClipboard(elementId, button) {
+            const textToCopy = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                button.textContent = '¡Copiado!';
+                setTimeout(() => {
+                    button.textContent = 'Copiar ' + (elementId === 'cbu-text' ? 'CBU' : 'Alias');
+                }, 1500);
+            }).catch(err => {
+                console.error('Error al copiar: ', err);
+            });
+        }
+    </script>
+</body>
+</html>

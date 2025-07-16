@@ -1,0 +1,372 @@
+/* Cambiar el color de fondo del body */
+body {
+    background-color: #F0F4F8; /* Un gris muy claro */
+    padding-top: 56px; /* Espacio para el navbar fijo */
+    font-family: 'Poppins', sans-serif; /* Para el texto general */
+}
+
+/* Personalizar el color del botón principal de Bootstrap */
+.btn-primary {
+    background-color: #7c1e1e;  
+    border-color: #7c1e1e;
+    /*background-color: #28a745;  Un verde vibrante, por ejemplo 
+    border-color: #28a745;*/
+}
+
+.btn-primary:hover {
+    background-color: #530707;  
+    border-color: #530707;
+    /*background-color: #218838;  Un verde más oscuro al pasar el ratón 
+    border-color: #1e7e34;*/
+}
+
+.logo-ong {
+    width: 155px; /* Ajusta el tamaño del logo según tus necesidades */
+    height: 67px; /* Mantiene la proporción del logo */
+}
+
+.navbar-brand {
+    display: flex; /* Convierte el navbar-brand en un contenedor flex */
+    align-items: center; /* Alinea verticalmente los ítems en el centro */
+    padding: 0; /* Asegura que no haya padding extra en el brand mismo */
+}
+
+.navbar-font-color {
+    color: #ffffff; /* Color del texto del navbar */
+}
+
+.navbar-nav .nav-item .nav-link.active {
+    color: #ff0000 !important; /* El azul brillante para el activo */
+    font-weight: 700 !important; /* Negrita más fuerte para el activo */
+    border-bottom: 2px solid #ff0000 !important; /* La línea azul para el activo */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #c4c4c4 !important; /* Un gris oscuro claro, para que se vea normal */
+    font-weight: 500; /* Peso de fuente normal (no negrita) */
+    border-bottom: 2px solid transparent; /* Asegura que no haya línea abajo por defecto */
+    padding-bottom: 5px; /* Mantiene el padding consistente */
+    transition: all 0.3s ease; /* Suaviza las transiciones de color y peso de fuente */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #b30000 !important; /* Un tono de azul para el hover */
+    border-bottom-color: #b30000; /* Opcional: línea inferior al pasar el ratón */
+}
+
+/* Estilos para el botón del menú hamburguesa */
+.navbar-toggler {
+    border-color: #660b0b !important; /* Borde rojo */
+    background-color: #660b0b !important; /* Fondo rojo muy claro para el botón */
+    /* Puedes ajustar el padding si lo quieres más grande */
+    padding: 0.25rem 0.75rem; 
+}
+
+/* Estilos para el ícono de las tres líneas (hamburguesa) dentro del botón */
+.navbar-toggler-icon {
+    /*
+     * El icono de Bootstrap es un SVG codificado en base64.
+     * Para cambiar su color, necesitamos modificar el SVG directamente.
+     * Aquí, cambiamos el color de las barras a rojo oscuro.
+     */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Estilo para el botón cuando está enfocado o activo (se usa para accesibilidad) */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5) !important; /* Sombra roja al hacer clic o enfocar */
+    border-color: #660b0b !important; /* Borde rojo al enfocar */
+}
+
+/* Estilos generales para todos los títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* Fuente recomendada, ver cómo añadirla abajo */
+    color: #2c3e50; /* Un gris oscuro casi negro para buena legibilidad */
+    margin-bottom: 1.5rem; /* Espaciado inferior para separar del contenido */
+    margin-top: 2rem; /* Espaciado superior para separar de la sección anterior */
+    line-height: 1.2; /* Altura de línea ligeramente menor para títulos */
+}
+
+/* Opcional: Un toque de letra más gruesa para que resalten */
+h1 {
+    font-weight: 700; /* Negrita más fuerte */
+    font-size: 2.8rem; /* Tamaño grande para el título principal */
+    text-align: center; /* Centrar el título principal */
+    color: #007bff; /* Color principal de la ONG, puede ser el azul de Bootstrap por ejemplo */
+}
+
+h2 {
+    font-weight: 600; /* Negrita */
+    font-size: 2.2rem;
+    border-bottom: 2px solid #e0e0e0; /* Una línea sutil debajo */
+    padding-bottom: 0.5rem; /* Espacio entre el texto y la línea */
+}
+
+h3 {
+    font-weight: 500; /* Normal o semi-negrita */
+    font-size: 1.8rem;
+    color: #34495e; /* Un tono de gris ligeramente diferente */
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif; /* Para los títulos */
+}
+
+/* Título principal - "Bienvenidos a Nombre de la ONG" */
+#inicio h1 {
+    font-size: 3.5rem; /* Un tamaño aún más grande */
+    color: #1a5276; /* Un azul oscuro institucional */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Sutil sombra para que resalte */
+    margin-bottom: 2rem;
+    text-transform: uppercase; /* Todo en mayúsculas */
+}
+
+/* Títulos de sección como "Quiénes Somos", "Contacto", "Nuestra Ubicación" */
+section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50; /* O tu color secundario */
+    text-align: center; /* Puedes centrar los títulos de sección */
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    position: relative; /* Para la línea inferior personalizada */
+}
+
+/* Línea decorativa debajo de los títulos h2 */
+section h2::after {
+    content: ''; /* Contenido vacío para un pseudo-elemento */
+    display: block;
+    width: 100px; /* Ancho de la línea */
+    height: 4px; /* Grosor de la línea */
+    background-color: #f39c12; /* Un color de acento, como un naranja */
+    margin: 0.5rem auto 0 auto; /* Centra la línea debajo del título */
+    border-radius: 2px; /* Bordes ligeramente redondeados */
+}
+
+section[id] {
+    scroll-margin-top: 100px; /* Espacio para el navbar fijo al hacer scroll */
+}
+
+/* Título del formulario "Envíanos un mensaje" */
+#contacto h3 {
+    font-size: 1.8rem;
+    color: #34495e;
+    text-align: center; /* También centrado */
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+/* Estilos para el contenedor de información de contacto */
+.contact-info {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f8f9fa; /* Color de fondo ligero */
+    height: 100%; /* Asegura que todas las columnas tengan la misma altura */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #343a40;
+}
+
+.contact-info p {
+    margin-bottom: 0;
+    color: #6c757d;
+}
+
+.contact-info a {
+    color: #007bff; /* Color del enlace principal */
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #0056b3;
+}
+
+/* Estilos para los iconos de redes sociales dentro de la sección de contacto */
+.social-icons-contact a {
+    color: #6c757d; /* Color por defecto, puedes ajustar */
+    transition: color 0.3s ease;
+}
+
+/* Puedes mantener los colores específicos al hover que ya tienes,
+   o ajustarlos para esta nueva clase si lo deseas */
+.social-icons-contact a:hover .fa-instagram {
+    color: #E1306C; 
+}
+.social-icons-contact a:hover .fa-facebook-f {
+    color: #3b5998;
+}
+.social-icons-contact a:hover .fa-x-twitter {
+    color: #000000;
+}
+.social-icons-contact a:hover .fa-youtube {
+    color: #FF0000; /* Rojo para YouTube */
+}
+
+.email-ong {
+    /* Esto permite que palabras muy largas (como un email) se rompan y pasen a la siguiente línea */
+    word-break: break-word; /* Ideal para URLs y emails muy largos */
+    /* overflow-wrap: break-word; /* Alternativa, con mejor soporte en algunos casos */
+}
+
+/* Si tu correo está dentro de un elemento con una anchura fija o un contenedor limitado */
+/* Por ejemplo, si está dentro de un div o una columna de Bootstrap */
+/* Ajusta el selector si no es una clase 'card-text' o similar */
+.card-text { /* O la clase de tu contenedor */
+    word-break: break-word;
+    /* overflow-wrap: break-word; /* Puedes usar este en lugar de word-break, o ambos para mayor compatibilidad */
+}
+
+
+.footer-logo img {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.8; 
+    transition : opacity 0.3s ease;
+}
+
+.footer-logo img:hover {
+    opacity: 1; /* Aumenta la opacidad al pasar el ratón */
+}
+
+/* Estilos para la sección de inicio (home-hero) */
+.home-hero {
+    background-color: #F0F4F8; /* Un color de fondo de respaldo */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centra la imagen */
+    background-size: cover; /* Cubre todo el fondo, puede recortar la imagen */
+    /* Opcional: Si quieres que el logo sea más sutil como marca de agua */
+    /* background-size: contain; /* Contiene la imagen completamente, puede haber espacios */
+    min-height: 500px; /* Ajusta la altura mínima de la sección */
+    position: relative; /* Necesario para el overlay si lo usas */
+}
+
+/* Opcional: Overlay oscuro para mejorar la legibilidad del texto blanco sobre el logo */
+.home-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Asegura que el contenido principal esté por encima del overlay */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contenedor principal para las etiquetas flotantes */
+.form-floating {
+    position: relative;
+}
+
+/* Estilos para los campos de entrada y áreas de texto dentro del contenedor */
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select,
+.form-floating > textarea {
+    padding: 1rem 0.75rem; /* Ajusta el padding para dejar espacio para la etiqueta */
+    height: auto; /* Permite que la altura se ajuste al contenido (importante para textareas) */
+    min-height: 3.5rem; /* Altura mínima para que la etiqueta tenga espacio */
+}
+
+/* Dando un efecto floating labels para los campos del formulario */
+.form-floating {
+    position: relative;
+}
+
+/* Estilos para los campos de entrada y áreas de texto dentro del contenedor */
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select,
+.form-floating > textarea {
+    padding: 1rem 0.75rem; /* Ajusta el padding para dejar espacio para la etiqueta */
+    height: auto; /* Permite que la altura se ajuste al contenido (importante para textareas) */
+    min-height: 3.5rem; /* Altura mínima para que la etiqueta tenga espacio */
+}
+
+/* Dando un efecto floating labels para los campos del formulario */
+.form-floating > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 1rem 0.75rem; /* Mismo padding que el input para que coincida */
+    pointer-events: none; /* Asegura que el clic en la etiqueta pase al input */
+    border: 1px solid transparent; /* Ayuda con el posicionamiento y ancho */
+    transform-origin: 0 0;
+    transition: opacity .1s ease-in-out, transform .1s ease-in-out; /* Transición suave */
+    opacity: .65; /* Opacidad inicial de la etiqueta */
+    color: #726c7d; /* Color por defecto de la etiqueta flotante */
+}
+
+/* Efecto al enfocar el campo o cuando ya tiene contenido (placeholder ya no visible) */
+.form-control:focus ~ label,
+.form-control:not(:placeholder-shown) ~ label,
+.form-select:focus ~ label,
+.form-select:not([value=""]):not(:first-child) ~ label, /* Para selects con valor */
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label {
+    opacity: .85; /* Aumenta la opacidad */
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem); /* Escala y mueve hacia arriba */
+    color: #ff0000 !important; /* Cambia el color al enfocar o tener valor */
+}
+
+/* NUEVA REGLA: Cambia el color del borde del campo al enfocarlo */
+.form-control:focus,
+textarea:focus {
+    border-color: #ff0000 !important; /* El mismo azul, por ejemplo */
+    box-shadow: 0 0 0 0.25rem #ff0000; /* Opcional: añade una sombra suave */
+}
+
+/* Puedes añadir también un color por defecto para el borde si no lo tienes */
+.form-control,
+textarea {
+    border-color: #dacece; /* Un gris claro, por ejemplo */
+}
+
+/* Estilos opcionales para validación (si Bootstrap las usa con is-valid/is-invalid) */
+/* Etiqueta para campo inválido */
+.was-validated .form-floating > .form-control:invalid ~ label,
+.form-floating > .form-control.is-invalid ~ label,
+.was-validated .form-floating > .form-select:invalid ~ label,
+.form-floating > .form-select.is-invalid ~ label,
+.was-validated .form-floating > textarea:invalid ~ label,
+.form-floating > textarea.is-invalid ~ label {
+    color: #dc3545; /* Rojo para error */
+}
+
+/* Etiqueta para campo válido */
+.was-validated .form-floating > .form-control:valid ~ label,
+.form-floating > .form-control.is-valid ~ label,
+.was-validated .form-floating > .form-select:valid ~ label,
+.form-floating > .form-select.is-valid ~ label,
+.was-validated .form-floating > textarea:valid ~ label,
+.form-floating > textarea.is-valid ~ label {
+    color: #198754; /* Verde para éxito */
+}
+/* Fin del bloque CSS */
+
+/* Estilos para el footer */
+footer {
+    color: #f8f9fa;
+    padding: 20px 0;
+}
